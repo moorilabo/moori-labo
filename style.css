@@ -1,0 +1,73 @@
+/* 全站字體設定：使用 Outfit */
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: #FAFAF9; /* 暖石色背景 */
+    color: #44403C; /* 暖深灰文字 */
+    overflow-x: hidden;
+}
+
+/* 針對 H1 大標題的特別設定：極細 */
+h1.main-title {
+    font-weight: 200; /* Extra Light */
+    letter-spacing: -0.02em;
+}
+
+/* 其他標題設定 */
+h2, h3, .vibe-font {
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
+
+/* ----------------------------------
+   背景霧氣動畫 (The Mist Effect)
+   ---------------------------------- */
+.mist-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px); /* 高度模糊 */
+    opacity: 0.5;
+    animation: float 25s infinite ease-in-out;
+    z-index: -1;
+}
+
+/* 光球 1 */
+.orb-1 {
+    width: 450px;
+    height: 450px;
+    background: #E7E5E4; /* 暖灰 */
+    top: -10%;
+    left: -10%;
+}
+
+/* 光球 2 */
+.orb-2 {
+    width: 500px;
+    height: 500px;
+    background: #F5F5F4; /* 極淺灰 */
+    bottom: 10%;
+    right: -10%;
+    animation-delay: -5s;
+}
+
+/* 漂浮動畫關鍵影格 */
+@keyframes float {
+    0% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(30px, -30px) scale(1.05); }
+    100% { transform: translate(0, 0) scale(1); }
+}
+
+/* ----------------------------------
+   文字進場動畫
+   ---------------------------------- */
+.fade-in-up {
+    animation: fadeInUp 1.2s ease-out forwards;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
